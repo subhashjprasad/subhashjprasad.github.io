@@ -221,12 +221,12 @@
 
     .navbar__item {
         width: 100%;
-padding-top: -5rem;
+padding-top: -15rem;
     }
 
     .navbar__links {
         text-align: center;
-        padding: none;
+        padding-top: -15rem;
         width: 100%;
         display: table;
     }
@@ -254,25 +254,6 @@ padding-top: -5rem;
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-}
-
-@media screen and (max-width: 480px) {
-
-    .navbar__item {
-        font-size: 2rem;
-        height: 20px;
-        padding: none;
-        width: 100%;
-        background: none;
-    }
-
-    .navbar__links {
-        text-align: center;
-        padding: none;
-        width: 100%;
-        display: table;
-    }
-
 }
 
 /* Logo Section CSS */
