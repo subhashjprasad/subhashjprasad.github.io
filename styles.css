@@ -279,7 +279,7 @@
     }
 
     #navbar__logo {
-        padding-left: 0;
+        padding-left: 5vw;
     }
 
     .navbar__toggle .bar {
@@ -291,7 +291,12 @@
     }
 
     .navbar__item {
+        font-size: 2rem;
+        height: 20px;
+        padding-top: 1.5rem;
+        padding-bottom: none;
         width: 100%;
+        background: none;
     }
 
     .navbar__links {
@@ -416,7 +421,7 @@
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
     .purpose__container {
         display: grid;
         grid-template-columns: auto;
@@ -535,9 +540,9 @@
 
     .partnership__card {
         margin: 1rem;
-        height: 200px;
-        width: 200px;
-        border-radius: 100px;
+        height: 300px;
+        width: 300px;
+        border-radius: 150px;
         background-image: url('/images/schoolonwheels.png');
         background-size: cover;
         position: relative;
@@ -645,6 +650,12 @@
   
   .footer__link--btn:hover:after {
     width: 100%;
+  }
+
+  @media screen and (max-width: 480px) {
+    .footer__container {
+        padding: 2rem 0;
+    }
   }
 
 /* Social Icons */
