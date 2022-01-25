@@ -254,35 +254,7 @@
     }
 }
 
-@media screen and (max-width: 480px) {
-
-    .navbar__menu {
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: -1000px;
-        opacity: 1;
-        transition: all 0.5s ease;
-        height: 60vh;
-        z-index: -1;
-    }
-
-    .navbar__menu.active {
-        background: #262626;
-        top: 100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 99;
-        height: 60vh;
-        font-size: 1.6rem;
-    }
-
-    #navbar__logo {
-        padding-left: 5vw;
-        background-color: #ff5252;
-    }
+/* @media screen and (max-width: 480px) {
 
     .navbar__toggle .bar {
         width: 25px;
@@ -330,7 +302,7 @@
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-}
+} */
 
 /* Logo Section CSS */
 .logo {
