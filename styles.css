@@ -873,7 +873,7 @@
     flex-wrap: wrap; 
     }
 
-    .tutorial__video iframe {
+    .vid {
         width: 336;
         height: 189;
     }
