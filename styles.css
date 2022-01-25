@@ -295,16 +295,14 @@
     .navbar__item {
         font-size: 2rem;
         height: 20px;
-        padding-top: 1.5rem;
-        padding-bottom: none;
+        padding: none;
         width: 100%;
         background: none;
     }
 
     .navbar__links {
         text-align: center;
-        padding-top: none;
-        padding: 2rem;
+        padding: none;
         width: 100%;
         display: table;
     }
@@ -440,7 +438,7 @@
     }
 
     .purpose__content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-top: 2rem;
     }
 
