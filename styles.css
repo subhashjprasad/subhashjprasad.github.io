@@ -4,6 +4,7 @@
         padding: 0;
         font-family: 'PT Sans', sans-serif;
         font-weight: bold;
+        background-color: #141414;
     }
 
     .navbar {
@@ -122,6 +123,7 @@
         padding-top: 2rem;
         padding-bottom: none;
         width: 100%;
+        background: none;
     }
 
     .navbar__links {
@@ -137,6 +139,7 @@
         width: 100%;
         display: table;
         padding: 2rem;
+        background: none;
     }
 
     .navbar__links:hover {
@@ -270,6 +273,7 @@
 
 .logo__img--container {
     text-align: center;
+    background: none;
 }
 
 #logo__img {
@@ -418,36 +422,6 @@
     transition: transform 250ms;
 }
 
-/* .partnership__card:nth-child(2) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/pic4.jpg');
-} */
-
-/* .partnership h2 {
-    position: absolute;
-    top: 350px;
-    left: 30px;
-}
-
-.partnership__card p {
-    position: absolute;
-    top: 400px;
-    left: 30px;
-}
-
-.partnership__card button {
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #f77062;
-    position: absolute;
-    top: 440px;
-    left: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-} */
-
 .partnership__card:hover {
     transform: scale(1.075);
     cursor: pointer; 
@@ -564,6 +538,7 @@
   }
   
   .footer__link--btn a {
+    background: none;
     position: relative;
     z-index: 2;
     color: #141414;
