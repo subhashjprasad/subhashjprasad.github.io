@@ -787,6 +787,7 @@
   .tutorial__container {
     display: grid;
   grid-template-columns: 1fr 1fr;
+
   align-items: center;
   justify-self: center;
   margin: 0 auto;
@@ -806,6 +807,19 @@
 
   .tutorial__video {
     padding-left: 2rem; 
+}
+
+@media screen and (max-width: 820px) {
+    .tutorial h1 {
+        font-size: 2rem;
+    }
+
+    .tutorial__container {
+        display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    }
 }
 
 /* Members Section */
