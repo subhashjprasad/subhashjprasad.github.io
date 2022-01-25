@@ -221,7 +221,7 @@
 
     .navbar__item {
         width: 100%;
-padding: none;
+padding-top: -5rem;
     }
 
     .navbar__links {
