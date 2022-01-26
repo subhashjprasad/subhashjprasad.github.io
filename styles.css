@@ -170,7 +170,7 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /*@media screen and (max-width: 960px) {
+    /* @media screen and (max-width: 960px) {
 
     .navbar__container {
         display: flex;
@@ -221,12 +221,11 @@
 
     .navbar__item {
         width: 100%;
-padding: none
     }
 
     .navbar__links {
         text-align: center;
-         padding: none
+        padding: 0rem;
         width: 100%;
         display: table;
     }
@@ -254,7 +253,26 @@ padding: none
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-}*/
+}
+
+@media screen and (max-width: 480px) {
+
+    .navbar__item {
+        font-size: 2rem;
+        height: 20px;
+        padding: none;
+        width: 100%;
+        background: none;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: none;
+        width: 100%;
+        display: table;
+    }
+
+} */
 
 /* Logo Section CSS */
 .logo {
@@ -285,7 +303,7 @@ padding: none
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .logo__container {
         display: grid;
         grid-template-columns: auto;
@@ -300,7 +318,7 @@ padding: none
         text-align: center;
         margin-bottom: 4rem;
     }
-}
+} */
 
 /* Purpose Section CSS */
 .purpose {
@@ -345,7 +363,7 @@ padding: none
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
     .purpose__container {
         display: grid;
         grid-template-columns: auto;
@@ -382,7 +400,7 @@ padding: none
         margin-top: 2rem;
         font-size: 1.5rem;
     }
-}
+} */
 
 /* Partnership Section CSS */
 .partnership {
@@ -430,7 +448,7 @@ padding: none
     cursor: pointer; 
 }
 
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
     .partnership {
         height: 80vh;
     }
@@ -473,7 +491,7 @@ padding: none
         color: #fff;
         transition: transform 250ms;
     }
-}
+} */
 
 /* Footer CSS */
 .footer__container {
@@ -576,11 +594,11 @@ padding: none
     width: 100%;
   }
 
-  @media screen and (max-width: 480px) {
+  /* @media screen and (max-width: 480px) {
     .footer__container {
         padding: 2rem 0;
     }
-  }
+  } */
 
 /* Social Icons */
 .social__icon--link {
@@ -625,7 +643,7 @@ padding: none
     color: #fff;
 }
 
-@media screen and (max-width: 820px) {
+/* @media screen and (max-width: 820px) {
     .footer__links {
         padding-top: 0;
     }
@@ -653,7 +671,7 @@ padding: none
         padding: 10px;
         width: 100%;
     }
-}
+} */
 
 /* Videos Section */
 .videos {
@@ -750,7 +768,7 @@ padding: none
       padding-top: 60px;
   }
 
-  @media screen and (max-width: 480px) {
+  /* @media screen and (max-width: 480px) {
     .videos h1 {
         font-size: 2rem;
     }
@@ -766,7 +784,7 @@ padding: none
         top: 419px;
         font-size: 1.5rem;
     }
-}
+} */
 
 /* Tutorial Section */
 .tutorial {
@@ -841,10 +859,10 @@ padding: none
   }
 
   .tutorial__video {
-    padding: auto; 
+    padding-left: 2rem; 
 }
 
-@media screen and (max-width: 820px) {
+/* @media screen and (max-width: 820px) {
     .tutorial h1 {
         font-size: 2rem;
         text-align: center;
@@ -861,7 +879,7 @@ padding: none
         width: 336px;
         height: 189px;
     }
-}
+} */
 
 /* Members Section */
 .members {
@@ -912,7 +930,7 @@ padding: none
     height: 5vh;
   }
 
-  @media screen and (max-width: 480px) {
+  /* @media screen and (max-width: 480px) {
       .members h1 {
           font-size: 2rem;
       }
@@ -920,4 +938,4 @@ padding: none
       .members p {
           font-size: 1rem;
       }
-  }
+  } */
