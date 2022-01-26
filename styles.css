@@ -15,6 +15,9 @@
         align-items: center;
         font-size: 1.2rem;
         position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
         position: sticky;
         top: 0;
         z-index: 999;
@@ -26,8 +29,7 @@
         height: 80px;
         z-index: 1;
         width: 100%;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0;
 
         display: flex;
         justify-content: space-between;
@@ -38,21 +40,21 @@
     }
 
     #navbar__logo {
+        background: none;
         background-color: #ff5252;
         background-size: 100%;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: #ff5252;
+        -moz-text-fill-color: #ff5252;
         display: flex;
         align-items: center;
         transition: transform 250ms;
         text-decoration: none;
         font-size: 2rem;
-        width: 300px;
-
-        padding-left: 5vw;
+        width: 180px;
+        margin-left: 5vw;
     }
 
     #navbar__logo:hover {
@@ -67,7 +69,7 @@
         top: -1000px;
         opacity: 1;
         transition: all 0.5s ease;
-        height: 40vh;
+        height: 60vh;
         z-index: -1;
 
         display: grid;
@@ -77,8 +79,9 @@
         top: -1000px;
         opacity: 1;
         transition: all 0.5s ease;
-        height: 50vh;
+        height: 60vh;
         z-index: -1;
+        background: none;
     }
 
     .navbar__menu.active {
@@ -120,8 +123,7 @@
     .navbar__item {
         font-size: 2rem;
         height: 20px;
-        padding-top: 2rem;
-        padding-bottom: none;
+        padding: 7vh;
         width: 100%;
         background: none;
     }
@@ -138,7 +140,6 @@
         text-align: center;
         width: 100%;
         display: table;
-        padding: 2rem;
         background: none;
     }
 
@@ -170,7 +171,7 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* @media screen and (max-width: 960px) {
+    @media screen and (max-width: 480px) {
 
     .navbar__container {
         display: flex;
@@ -255,7 +256,7 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+ /* @media screen and (max-width: 480px) {
 
     .navbar__item {
         font-size: 2rem;
@@ -303,7 +304,7 @@
 }
 
 /* Mobile Responsive */
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .logo__container {
         display: grid;
         grid-template-columns: auto;
@@ -318,7 +319,7 @@
         text-align: center;
         margin-bottom: 4rem;
     }
-} */
+}
 
 /* Purpose Section CSS */
 .purpose {
@@ -363,7 +364,7 @@
 }
 
 /* Mobile Responsive */
-/* @media screen and (max-width: 960px) {
+@media screen and (max-width: 960px) {
     .purpose__container {
         display: grid;
         grid-template-columns: auto;
@@ -400,7 +401,7 @@
         margin-top: 2rem;
         font-size: 1.5rem;
     }
-} */
+}
 
 /* Partnership Section CSS */
 .partnership {
@@ -448,7 +449,7 @@
     cursor: pointer; 
 }
 
-/* @media screen and (max-width: 960px) {
+@media screen and (max-width: 960px) {
     .partnership {
         height: 80vh;
     }
@@ -491,7 +492,7 @@
         color: #fff;
         transition: transform 250ms;
     }
-} */
+}
 
 /* Footer CSS */
 .footer__container {
@@ -594,11 +595,11 @@
     width: 100%;
   }
 
-  /* @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     .footer__container {
         padding: 2rem 0;
     }
-  } */
+  }
 
 /* Social Icons */
 .social__icon--link {
@@ -643,7 +644,7 @@
     color: #fff;
 }
 
-/* @media screen and (max-width: 820px) {
+@media screen and (max-width: 820px) {
     .footer__links {
         padding-top: 0;
     }
@@ -671,7 +672,7 @@
         padding: 10px;
         width: 100%;
     }
-} */
+}
 
 /* Videos Section */
 .videos {
@@ -764,11 +765,7 @@
       width: 100%;
   }
 
-  .sticky + .content {
-      padding-top: 60px;
-  }
-
-  /* @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     .videos h1 {
         font-size: 2rem;
     }
@@ -784,7 +781,7 @@
         top: 419px;
         font-size: 1.5rem;
     }
-} */
+}
 
 /* Tutorial Section */
 .tutorial {
@@ -862,7 +859,7 @@
     padding-left: 2rem; 
 }
 
-/* @media screen and (max-width: 820px) {
+@media screen and (max-width: 820px) {
     .tutorial h1 {
         font-size: 2rem;
         text-align: center;
@@ -879,7 +876,7 @@
         width: 336px;
         height: 189px;
     }
-} */
+}
 
 /* Members Section */
 .members {
@@ -930,7 +927,7 @@
     height: 5vh;
   }
 
-  /* @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
       .members h1 {
           font-size: 2rem;
       }
@@ -938,4 +935,4 @@
       .members p {
           font-size: 1rem;
       }
-  } */
+  }
