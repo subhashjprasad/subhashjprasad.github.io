@@ -46,8 +46,8 @@
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
-        -webkit-text-fill-color: #ff5252;
-        -moz-text-fill-color: #ff5252;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
         display: flex;
         align-items: center;
         transition: transform 250ms;
@@ -197,19 +197,13 @@
     }
 
     .navbar__menu.active {
-        background: #262626;
+        background: #fff;
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
         height: 60vh;
         font-size: 1.5rem;
-    }
-
-    #navbar__logo {
-        padding-left: 5vw;
-        background-color: #ff5252;
-        z-index: 10;
     }
 
     .navbar__toggle .bar {
@@ -256,25 +250,6 @@
     }
 }
 
- /* @media screen and (max-width: 480px) {
-
-    .navbar__item {
-        font-size: 2rem;
-        height: 20px;
-        padding: none;
-        width: 100%;
-        background: none;
-    }
-
-    .navbar__links {
-        text-align: center;
-        padding: none;
-        width: 100%;
-        display: table;
-    }
-
-} */
-
 /* Logo Section CSS */
 .logo {
     background-color: #b9ffe7;
@@ -304,7 +279,7 @@
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     .logo__container {
         display: grid;
         grid-template-columns: auto;
@@ -455,7 +430,7 @@
     }
 
     .partnership h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-top: 2rem;
     }
 
@@ -876,6 +851,14 @@
         width: 336px;
         height: 189px;
     }
+
+    .tutorial__content {
+        padding-right: 0; 
+    }
+  
+    .tutorial__video {
+      padding-left: 0; 
+  }
 }
 
 /* Members Section */
