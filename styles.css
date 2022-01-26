@@ -170,7 +170,7 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    @media screen and (max-width: 960px) {
+    /*@media screen and (max-width: 960px) {
 
     .navbar__container {
         display: flex;
@@ -221,12 +221,12 @@
 
     .navbar__item {
         width: 100%;
-padding-top: -15rem;
+padding: none
     }
 
     .navbar__links {
         text-align: center;
-        padding-top: -15rem;
+         padding: none
         width: 100%;
         display: table;
     }
@@ -254,7 +254,7 @@ padding-top: -15rem;
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-}
+}*/
 
 /* Logo Section CSS */
 .logo {
