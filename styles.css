@@ -123,7 +123,7 @@
     .navbar__item {
         font-size: 2rem;
         height: 20px;
-        padding: 7vh;
+        margin: 7vh;
         width: 100%;
         background: none;
     }
@@ -221,7 +221,6 @@
 
     .navbar__item {
         width: 100%;
-        background-color: #fff;
     }
 
     .navbar__links {
