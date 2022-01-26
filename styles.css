@@ -197,7 +197,7 @@
     }
 
     .navbar__menu.active {
-        background: #fff;
+        background: #262626;
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -214,8 +214,14 @@
         background: #fff;
     }
 
+    #navbar__logo {
+        -webkit-text-fill-color: #ff5252;
+        -moz-text-fill-color: #ff5252;
+    }
+
     .navbar__item {
         width: 100%;
+        background-color: #fff;
     }
 
     .navbar__links {
