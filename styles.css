@@ -781,6 +781,7 @@
     margin-top: 4rem;
     margin-bottom: 4rem;
     font-size: 4rem;
+    max-width: 80vw;
   }
 
   .tutorial h2 {
@@ -834,7 +835,7 @@
     padding-left: 2rem; 
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 860px) {
     .tutorial h1 {
         font-size: 2rem;
         text-align: center;
