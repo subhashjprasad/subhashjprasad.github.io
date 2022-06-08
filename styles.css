@@ -725,6 +725,10 @@
   .videos__card:nth-child(3) {
     background-image: url('/images/googlelogo.png');
   }
+
+  .videos__card:nth-child(4) {
+    background-image: url('/images/pythonlogo.png');
+  }
   
   .videos__card h2 {
     color: #fff;
