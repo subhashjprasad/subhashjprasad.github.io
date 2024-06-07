@@ -40,7 +40,7 @@ export function BlockSpinner({ position = [ 0, 0, 0 ] })
 
     return <group position={ position }>
         <RigidBody ref={ obstacle } type="kinematicPosition" position={ [ 0, 0.3, 0 ] } restitution={ 0.2 } friction={ 0 }>
-            <mesh geometry={ boxGeometry } material={ obstacleMaterial } scale={ [ 3.5, 0.3, 0.3 ] } castShadow receiveShadow />
+            <mesh geometry={ boxGeometry } material={ obstacleMaterial } scale={ [ 6.5, 0.3, 0.3 ] } castShadow receiveShadow />
         </RigidBody>
     </group>
 }

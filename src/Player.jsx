@@ -152,7 +152,7 @@ export default function Player() {
         state.camera.lookAt(smoothedCameraTarget)
     })
 
-    const dino = useGLTF('./Dino/DinoWalkSide.glb')
+    const dino = useGLTF('./Dino/Dino.glb')
 
     dino.scene.traverse((child) => {
         if (child.isMesh) {
@@ -164,6 +164,7 @@ export default function Player() {
     const walkingAnimation = animations.actions.walk
     const idleAnimation = animations.actions.idle
     const walkingSideAnimation = animations.actions.side
+    const chargeAnimation = animations.actions.charge
     let prev_animation = idleAnimation
 
     return (
