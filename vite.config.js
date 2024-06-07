@@ -7,7 +7,7 @@ export default {
     [
         react()
     ],
-    root: './src',
+    root: './',
     publicDir: "../public/",
     base: './',
     server:

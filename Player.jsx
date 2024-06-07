@@ -152,7 +152,7 @@ export default function Player() {
         state.camera.lookAt(smoothedCameraTarget)
     })
 
-    const dino = useGLTF('./Dino/Dino.glb')
+    const dino = useGLTF('./public/Dino/Dino.glb')
 
     dino.scene.traverse((child) => {
         if (child.isMesh) {

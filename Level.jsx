@@ -47,7 +47,7 @@ export function BlockSpinner({ position = [ 0, 0, 0 ] })
 
 export function Title({position = [0, 0, 0]})
 {
-    const title = useGLTF('./title.glb')
+    const title = useGLTF('./public/title.glb')
     title.scene.children.forEach((mesh) =>
     {
         mesh.castShadow = true

@@ -17,7 +17,7 @@ export default function Experience()
         </Physics>
 
         <Text3D 
-            font="./fonts/helvetiker_regular.typeface.json" 
+            font="./public/fonts/helvetiker_regular.typeface.json" 
             position = {[-3, 2, 0]}
             size={ 0.5 }
             height={ 0.1 }
@@ -32,7 +32,7 @@ export default function Experience()
             <meshNormalMaterial />
         </Text3D>
         <Text3D 
-            font="./fonts/helvetiker_regular.typeface.json" 
+            font="./public/fonts/helvetiker_regular.typeface.json" 
             position = {[-2.2, 3, 0]}
             size={ 0.2 }
             height={ 0.1 }
