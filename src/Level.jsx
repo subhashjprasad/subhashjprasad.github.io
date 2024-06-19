@@ -7,7 +7,7 @@ import { useAnimations, useGLTF } from '@react-three/drei'
 const boxGeometry = new THREE.BoxGeometry(1, 1, 1)
 
 const floorMaterial = new THREE.MeshStandardMaterial({ color: '#2A8D5D'})
-const obstacleMaterial = new THREE.MeshStandardMaterial({ color: 'orangered'})
+const obstacleMaterial = new THREE.MeshStandardMaterial({ color: '#FFFFFF'})
 
 export function BlockStart({ position = [ 0, 0, 0 ] })
 {
@@ -47,7 +47,7 @@ export function BlockSpinner({ position = [ 0, 0, 0 ] })
 
 export function Title({position = [0, 0, 0]})
 {
-    const title = useGLTF('./public/title.glb')
+    const title = useGLTF('./title.glb')
     title.scene.children.forEach((mesh) =>
     {
         mesh.castShadow = true
