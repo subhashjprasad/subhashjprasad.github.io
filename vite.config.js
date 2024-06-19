@@ -7,7 +7,7 @@ export default {
     [
         react()
     ],
-    root: './',
+    root: './src',
     publicDir: "../public/",
     base: './',
     server:
@@ -17,7 +17,7 @@ export default {
     },
     build:
     {
-        outDir: 'dist',
+        outDir: '../dist/',
         emptyOutDir: true,
         sourcemap: true
     }
