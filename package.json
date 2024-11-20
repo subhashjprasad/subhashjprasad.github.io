@@ -19,13 +19,21 @@
     "@react-three/fiber": "^8.13.0",
     "@react-three/postprocessing": "^2.14.8",
     "@react-three/rapier": "^1.0.1",
+    "cytoscape": "^3.30.3",
+    "d3": "^7.9.0",
     "firebase": "^10.12.2",
+    "force-graph": "^1.46.0",
     "r3f-perf": "^7.1.2",
     "react": "18.2",
+    "react-cytoscapejs": "^2.0.0",
     "react-dom": "18.2",
+    "react-force-graph": "^1.44.7",
+    "react-force-graph-2d": "^1.25.8",
+    "react-vis-network": "^1.0.0",
     "serve": "^14.2.3",
     "three": "^0.153.0",
     "vercel": "^32.1.0",
+    "vis-network": "^9.1.9",
     "zustand": "4.3"
   }
 }

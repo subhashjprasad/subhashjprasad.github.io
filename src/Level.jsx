@@ -7,7 +7,7 @@ import { useAnimations, useGLTF } from '@react-three/drei'
 const boxGeometry = new THREE.BoxGeometry(1, 1, 1)
 
 const floorMaterial = new THREE.MeshStandardMaterial({ color: '#2A8D5D'})
-const obstacleMaterial = new THREE.MeshStandardMaterial({ color: '#FFFFFF'})
+const obstacleMaterial = new THREE.MeshStandardMaterial({ color: '#FA3A00'})
 
 export function BlockStart({ position = [ 0, 0, 0 ] })
 {

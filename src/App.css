@@ -1,0 +1,393 @@
+:root {
+  --header-color: #6FC1FF;
+  --secondary-background-color: #222A30;
+  --background-color: #111518;
+  --text-color: #D6EDFF;
+  --banner-hover-color: #333F48;
+  --faint-text-color: #94A5B3;
+  --accent-color: #E6898C;
+  --gold-color: #E6D68A;
+}
+
+@font-face {
+  font-family: 'Monaspace';
+  src: url('../public/fonts/MonaspaceNeon-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  font-family: 'Monaspace', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color) !important;
+  color: var(--text-color);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--background-color) !important;
+  color: var(--text-color);
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2vh 4vw;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.left-section {
+  max-width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 0;
+  text-align: left;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  margin-bottom: 2vh;
+}
+
+.profile-picture {
+  width: 10vw;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%; /* Makes the picture circular */
+}
+
+.name-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-section {
+  max-width: 50vw;
+  text-align: left;
+  color: var(--text-color);
+  margin-top: 3.5vh;
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      padding: 2vh 4vw;
+  }
+
+  .left-section, .right-section {
+      max-width: 100%;
+  }
+
+  .experience-item {  
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3vh;
+  }
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 4vh;
+}
+
+.date-range {
+  font-size: 0.9vw;
+  color: var(--faint-text-color);
+  width: 15vw;
+  text-align: right;
+  margin-right: 2vw;
+  margin-top: 0.6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.experience-image {
+  margin-top: 1vh; /* Add space between the date and the image */
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  margin-left: 0.2vw;
+}
+
+.role-company {
+  flex-grow: 1;
+}
+
+.role-company h3 {
+  font-size: 1.4vw;
+  font-weight: 700;
+  color: var(--header-color);
+  margin: 0;
+}
+
+.role-company h3 a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease, color 0.3s ease;
+}
+
+.role-company h3 a:hover {
+  color: var(--accent-color);
+}
+
+.role-company p {
+  font-size: 1vw;
+  color: var(--text-color);
+  margin-top: 0.5vh;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 60vw;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5vw;
+  margin-top: 0.5vh;
+  max-width: 60vw;
+}
+
+.skill-badge {
+  background-color: var(--secondary-background-color);
+  color: var(--header-color);
+  padding: 0.5vh 1vw;
+  border-radius: 12px;
+  font-size: 0.8vw;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.skill-badge:hover {
+  transform: scale(1.1);
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3vw;
+  margin: 0;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5vw;
+  margin-top: 1vh;
+  font-weight: 400;
+  color: var(--header-color);
+}
+
+p {
+  font-size: 0.85vw;
+  margin: 1vh 0;
+  line-height: 1.6;
+}
+
+.banner {
+  background-color: var(--secondary-background-color);
+  color: var(--text-color);
+  padding: 1vh;
+  text-align: center;
+  font-size: 1vw;
+  cursor: pointer;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.banner:hover {
+  background-color: var(--banner-hover-color);
+  color: var(--header-color);
+}
+
+.container {
+  margin-top: 8vh;
+}
+
+.section {
+  padding: 5vh 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.section h2 {
+  font-size: 1.5vw;
+  margin-bottom: 2vh;
+  color: var(--text-color);
+}
+
+.section p {
+  font-size: 0.85vw;
+  max-width: 60vw;
+  margin: 0 auto;
+}
+
+.canvas-container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+canvas {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2.5vw;
+  font-weight: 700;
+  margin-bottom: 2vh;
+  color: var(--text-color);
+  text-align: left;
+  margin-left: 11.5vw;
+}
+
+.skills-title {
+  font-size: 2.5vw;
+  font-weight: 700;
+  margin-bottom: 0vh;
+  color: var(--text-color);
+  text-align: left;
+  margin-left: 15vw;
+  margin-top: 5vh;
+}
+
+.education-section {
+  margin-top: 2vh;
+  color: var(--text-color);
+  font-size: 1vw;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.education-header {
+  color: var(--header-color);
+  font-weight: 700;
+}
+
+.education-section h3 {
+  font-size: 1.4vw;
+  color: var(--header-color);
+  margin-bottom: 1vh;
+  text-align: left;
+  transition: color 0.3s ease;
+  max-width: 30vw;
+}
+
+.education-section h3:hover {
+  color: var(--gold-color);
+}
+
+.education-section p {
+  margin: 0.2vh 0;
+  color: var(--text-color);
+  font-size: 1vw;
+}
+
+.dropdown-header {
+  cursor: pointer;
+  font-size: 1vw;
+  color: var(--header-color);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+  margin-top: 1vh;
+  transition: color 0.2s ease;
+}
+
+.dropdown-header:hover {
+  color: var(--accent-color);
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  color: var(--text-color);
+  font-size: 1vw;
+  line-height: 1.5;
+}
+
+.dropdown-content.open {
+  max-height: 20vh; /* Large enough to fit content */
+  opacity: 1;
+  transition: max-height 0.5s ease;
+}
+
+.dropdown-content p {
+  margin: 0;
+  padding: 0.5vh 0;
+}
+
+.dropdown-content-long {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  color: var(--text-color);
+  font-size: 1vw;
+  line-height: 1.5;
+}
+
+.dropdown-content-long.open {
+  max-height: 40vh; /* Large enough to fit content */
+  opacity: 1;
+  transition: max-height 0.5s ease;
+}
+
+.dropdown-content-long p {
+  margin: 0;
+  padding: 0.5vh 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 1vw; /* Space between icons */
+  margin-top: 0px; /* Adjust spacing from "Problem Solver" */
+}
+
+.social-icon {
+  width: 2.5vw; /* Adjust size of the icons */
+  height: 2.5vw;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}

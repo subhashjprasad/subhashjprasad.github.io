@@ -8,7 +8,7 @@ export default function Experience()
 {
     return <>
 
-        <color args={ [ '#bdedfc' ] } attach="background" />
+        <color args={ [ '#C5F3FC' ] } attach="background" />
 
         <Physics debug={ false }>
             <Lights />

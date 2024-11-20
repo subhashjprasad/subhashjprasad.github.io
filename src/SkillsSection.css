@@ -1,0 +1,62 @@
+/* Skills Section Layout */
+.skills-section {
+  display: grid; /* Corrected to use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(5vw, 1fr)); /* Creates responsive grid */
+  gap: 0px; /* Adds space between grid items */
+  justify-content: center; /* Centers grid items horizontally */
+  align-items: center; /* Centers grid items vertically */
+  padding: 0vh;
+  background-color: #111518; /* Dark background */
+  margin-left: -1.5vw;
+  margin-top: 0vh;
+}
+
+/* Skill Circle */
+.skill-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 5vw; /* Fixed width for all items */
+  height: 10vh; /* Fixed height for uniform alignment */
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-top: 0vh;
+}
+
+.skill-circle:hover {
+  transform: scale(1.5);
+}
+
+/* Skill Icon */
+.skill-icon {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.skill-name {
+  position: absolute;
+  bottom: 80%; /* Position above the icon */
+  font-weight: bold;
+  font-size: 0.8vw;
+  color: #E6898C;
+  text-align: center;
+  white-space: nowrap; /* Prevent name wrapping */
+  background-color: #222A30; /* Add a background for readability */
+  padding: 0.2vh 0.5vw;
+  border-radius: 4px; /* Rounded corners */
+  opacity: 0; /* Hide by default */
+  visibility: hidden; /* Prevent interaction when not visible */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in */
+  padding-top: 3px;
+}
+
+/* Show Skill Name on Hover */
+.skill-circle:hover .skill-name {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-1vh); /* Adds slight upward movement */
+}

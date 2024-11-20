@@ -1,0 +1,15 @@
+/* AnimatedText.css */
+.animated-text {
+  display: inline-flex;
+}
+
+.char {
+  display: inline-block;
+  transition: color 0.2s ease;
+  color: #6FC1FF;
+  font-weight: 700;
+}
+
+.char:hover {
+  color: #007acc; /* Change to your preferred hover color */
+}

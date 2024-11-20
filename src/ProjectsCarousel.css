@@ -1,0 +1,111 @@
+.centered {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Full-width carousel container */
+.carousel-container {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Carousel slide wrapper */
+.carousel-slide-wrapper {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center; /* Ensure the carousel items are centered */
+}
+
+/* Carousel slide (holds all items) */
+.carousel-slide {
+  display: flex;
+  animation: slide 40s linear infinite; /* Continuous movement */
+  will-change: transform;
+}
+
+/* Pause animation on hover */
+.carousel-container:hover .carousel-slide {
+  animation-play-state: paused; /* Stop sliding on hover */
+}
+
+/* Carousel item */
+.carousel-item {
+  min-width: 33.33%; /* Show 3 items at a time */
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-start; /* Center content vertically */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+/* Scale the item on hover */
+.carousel-item:hover {
+  transform: scale(1.1); /* Slightly enlarge the project item */
+  z-index: 10; /* Bring it forward */
+  cursor: pointer;
+}
+
+/* Carousel image */
+.carousel-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid var(--header-color);
+}
+
+/* Carousel content */
+.carousel-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align content horizontally */
+  justify-content: center;
+}
+
+.carousel-content h3 {
+  font-size: 1.4vw;
+  font-weight: 700;
+  color: var(--header-color);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.carousel-content p {
+  font-size: 1vw;
+  color: var(--text-color);
+  line-height: 1.5;
+  max-width: 300px;
+  text-align: center; /* Center text */
+}
+
+/* Keyframes for infinite scrolling */
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start at 0 */
+  }
+  100% {
+    transform: translateX(-166.66%); /* Move by 200%, allowing the second set of items to come in */
+  }
+}
+
+/* Continuous movement with smooth transitions */
+.carousel-slide {
+  display: flex;
+  will-change: transform;
+  animation: slide 20s linear infinite; /* Slow and smooth infinite sliding */
+}
