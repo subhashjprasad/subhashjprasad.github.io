@@ -1,5 +1,13 @@
 /* AnimatedText.css */
+@font-face {
+  font-family: 'Monaspace';
+  src: url('../public/fonts/JetBrainsMono-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .animated-text {
+  font-family: 'Monaspace', serif;
   display: inline-flex;
 }
 

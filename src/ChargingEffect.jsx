@@ -1,75 +1,81 @@
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
-let ringColor = new THREE.Color(0xffffff)
+function ChargingEffect({ position, chargeProgressRef }) {
+    const particlesRef = useRef()
+    const particleCount = 100
+    const maxRadius = 2.5
+    const speed = 1.0 // Speed at which particles move inward
 
-function ChargingEffect({ position }) {
-    const group = useRef()
-    const maxRadius = 1
-    const gap = 0.1
-    const speed = 0.5
-    const spawnInterval = 0.25 // Interval at which new rings should be created
-    const [lastSpawnTime, setLastSpawnTime] = useState(0)
-
-    const createRing = (startTime) => {
-        const outerRadius = maxRadius
-        const innerRadius = outerRadius - gap
-        const geometry = new THREE.RingGeometry(innerRadius, outerRadius, 32)
-        const material = new THREE.MeshBasicMaterial({ color: ringColor, side: THREE.DoubleSide, transparent: true })
-        material.opacity = 0
-        const ring = new THREE.Mesh(geometry, material)
-        ring.userData = {
-            initialRadius: outerRadius,
-            speed: speed,
-            startTime: startTime
-        }
-        group.current.add(ring)
+    // Create initial particle positions constrained to the floor (XZ plane)
+    const particles = new Float32Array(particleCount * 3)
+    for (let i = 0; i < particleCount; i++) {
+        const angle = Math.random() * 2 * Math.PI // Random angle around the center
+        const r = Math.random() * maxRadius // Random distance from the center
+        particles[i * 3] = r * Math.cos(angle) // X coordinate
+        particles[i * 3 + 1] = 0 // Y is fixed (floor)
+        particles[i * 3 + 2] = r * Math.sin(angle) // Z coordinate
     }
 
+    const particleGeometry = new THREE.BufferGeometry()
+    particleGeometry.setAttribute('position', new THREE.BufferAttribute(particles, 3))
+
+    // Create dynamic colors for particles
+    const colors = new Float32Array(particleCount * 3)
+    for (let i = 0; i < particleCount; i++) {
+        colors[i * 3] = 0 // Red
+        colors[i * 3 + 1] = 1 // Green
+        colors[i * 3 + 2] = 1 // Blue
+    }
+    particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
+
+    const particleMaterial = new THREE.PointsMaterial({
+        size: 0.05,
+        vertexColors: true, // Enable per-particle colors
+        transparent: true,
+        opacity: 1.0,
+    })
+
     useFrame((state, delta) => {
-        if (group.current) {
-            const elapsed = state.clock.elapsedTime
-            const rings = group.current.children
+        const cpr = chargeProgressRef.current
+        const positions = particlesRef.current.geometry.attributes.position.array
+        const colors = particlesRef.current.geometry.attributes.color.array
 
-            // Iterate over the rings in reverse order to safely remove elements while iterating
-            for (let idx = rings.length - 1; idx >= 0; idx--) {
-                const ring = rings[idx]
-                const progress = (elapsed - ring.userData.startTime) * ring.userData.speed
-                const currentScale = 1 - (progress % 1)
-                ring.scale.setScalar(currentScale * ring.userData.initialRadius)
-                ring.position.set(0, 0, 0)
+        for (let i = 0; i < particleCount; i++) {
+            const index = i * 3
+            const x = positions[index]
+            const z = positions[index + 2]
 
-                ring.material.opacity = 1 - currentScale
+            const distance = Math.sqrt(x * x + z * z)
 
-                if (progress > 1) {
-                    group.current.remove(ring)
-                }
+            // Move particles inward on the XZ plane
+            if (distance > 0.1) {
+                const factor = delta * speed
+                positions[index] -= (x / distance) * factor
+                positions[index + 2] -= (z / distance) * factor
+            } else {
+                // Respawn particle at random position on the floor
+                const angle = Math.random() * 2 * Math.PI
+                const r = Math.random() * maxRadius
+                positions[index] = r * Math.cos(angle)
+                positions[index + 1] = 0 // Ensure Y remains on the floor
+                positions[index + 2] = r * Math.sin(angle)
             }
 
-            // Check if a new ring should be created based on spawnInterval
-            if (elapsed - lastSpawnTime > spawnInterval) {
-                if (rings.length > 0) {
-                    const leadingRing = rings[rings.length - 1]
-                    const leadingRingProgress = (elapsed - leadingRing.userData.startTime) * leadingRing.userData.speed
-                    if (leadingRingProgress > 0.25) {
-                        ringColor.g = Math.max(ringColor.g - 0.1, 0)
-                        ringColor.b = Math.max(ringColor.b - 0.1, 0)
-                        createRing(elapsed)
-                        setLastSpawnTime(elapsed)
-                    }
-                } else {
-                    ringColor.g = 1
-                    ringColor.b = 1
-                    createRing(elapsed)
-                    setLastSpawnTime(elapsed)
-                }
-            }
+            // Update particle color based on chargeProgress (0.0 to 1.0)
+            colors[index] = cpr // Red increases with charge
+            colors[index + 1] = 1 - cpr // Green decreases
+            colors[index + 2] = 1 - cpr // Blue shifts
         }
+
+        // Mark attributes as needing update
+        particlesRef.current.geometry.attributes.position.needsUpdate = true
+        particlesRef.current.geometry.attributes.color.needsUpdate = true
     })
 
     return (
-        <group ref={group} position={position} rotation={[-Math.PI / 2, 0, 0]} /> // Rotate to lay flat on the ground
+        <points ref={particlesRef} geometry={particleGeometry} material={particleMaterial} position={position} />
     )
 }
 

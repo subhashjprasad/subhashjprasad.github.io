@@ -16,6 +16,7 @@ export default function Player() {
     let flipped = false
 
     let animation_state = "idle"
+    const chargeProgressRef = useRef(0)
 
     const jumpUp = (chargeDuration) => {
         const origin = body.current.translation()
@@ -86,11 +87,17 @@ export default function Player() {
                 prev_animation = chargeAnimation
                 setIsCharging(true)
                 startTime = state.clock.getElapsedTime()
+            } else {
+                chargeProgressRef.current = Math.min(
+                    (state.clock.getElapsedTime() - startTime) / 3,
+                    1
+                  )
             }
         } else if (animation_state === "charging") {
             const chargeDuration = state.clock.getElapsedTime() - startTime
             jumpUp(chargeDuration)
 
+            chargeProgressRef.current = 0
             prev_animation.fadeOut(0.5)
             idleAnimation.reset().fadeIn(0.5).play()
             animation_state = "idle"
@@ -180,7 +187,7 @@ export default function Player() {
         }
 
         const currentVelocity = body.current.linvel()
-        const maxFallSpeed = -30
+        const maxFallSpeed = -20
         if (currentVelocity.y < maxFallSpeed) {
             body.current.setLinvel({ x: currentVelocity.x, y: maxFallSpeed, z: currentVelocity.z })
         }
@@ -226,7 +233,7 @@ export default function Player() {
             <primitive object={dino.scene} scale={0.1} />
             <CuboidCollider args={[0.2, 0.2, 0.35]} position={[0, 0.2, -0.15]} castShadow />
             <CuboidCollider args={[0.1, 0.2, 0.15]} position={[0, 0.5, 0.35]} castShadow />
-            {isCharging && <ChargingEffect position={[0, 0.01, 0]} />}
+            {isCharging && <ChargingEffect position={[0, 0.01, 0]} chargeProgressRef={chargeProgressRef} />}
         </RigidBody>
     )
 }

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "start": "serve -s dist",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "push": "gh-pages -d dist"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "4.0",

@@ -10,14 +10,21 @@
 }
 
 @font-face {
+  font-family: 'Roboto';
+  src: url('../public/fonts/RobotoSlab-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Monaspace';
-  src: url('../public/fonts/MonaspaceNeon-Regular.otf') format('opentype');
+  src: url('../public/fonts/JetBrainsMono-Regular.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 html, body {
-  font-family: 'Monaspace', sans-serif;
+  font-family: 'Roboto', serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -62,7 +69,7 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 0;
+  margin-top: 0.5vh;
   text-align: left;
 }
 
@@ -82,6 +89,7 @@ html::-webkit-scrollbar {
 
 .name-title {
   display: flex;
+  min-width: 30vw;
   flex-direction: column;
   justify-content: center;
 }
@@ -90,7 +98,7 @@ html::-webkit-scrollbar {
   max-width: 50vw;
   text-align: left;
   color: var(--text-color);
-  margin-top: 3.5vh;
+  margin-top: 1vh;
 }
 
 @media (max-width: 768px) {
@@ -122,6 +130,7 @@ html::-webkit-scrollbar {
 }
 
 .date-range {
+  font-family: 'Monaspace', serif;
   font-size: 0.9vw;
   color: var(--faint-text-color);
   width: 15vw;
@@ -182,7 +191,7 @@ html::-webkit-scrollbar {
 .skill-badge {
   background-color: var(--secondary-background-color);
   color: var(--header-color);
-  padding: 0.5vh 1vw;
+  padding: 0.5vh 1vw 0.8vh;
   border-radius: 12px;
   font-size: 0.8vw;
   transition: transform 0.2s ease, color 0.2s ease;
@@ -284,7 +293,7 @@ canvas {
   margin-bottom: 0vh;
   color: var(--text-color);
   text-align: left;
-  margin-left: 15vw;
+  margin-left: 16vw;
   margin-top: 5vh;
 }
 

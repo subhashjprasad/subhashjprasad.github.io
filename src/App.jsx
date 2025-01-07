@@ -33,7 +33,7 @@ const App = () => {
               <div className="profile-container">
                 <img src="images/pfp-face.jpg" alt="Profile Picture" className="profile-picture" />
                 <div className="name-title">
-                  <Typewriter text="Subhash Prasad" speed={80} />
+                  <Typewriter text="Subhash J. Prasad" speed={80} />
                   <AnimatedText
                     phrases={["Software Engineer", "Problem Solver", "Maker", "EECS Major", "Dinosaur Lover"]}
                     interval={4000}
@@ -54,7 +54,7 @@ const App = () => {
               <div className="education-section">
                 <h3>University of California, Berkeley</h3>
                 <p>B.S. in Electrical Engineering and Computer Sciences (<span style={{color: '#6FC1FF'}}>EECS</span>)</p>
-                <p>GPA: <span style={{color: '#6FC1FF'}}>4.00</span> / 4.00</p>
+                <p>GPA: 3.91 / 4.00</p>
                 <p>Expected Graduation <span style={{color: '#6FC1FF'}}>2026</span></p>
 
                 {/* Organizations Section */}
@@ -104,7 +104,7 @@ const App = () => {
                     <img src="images/redwood.jpg" alt="" class="experience-image"></img>
                   </div>
                   <div className="role-company">
-                    <h3>Researcher <span style={{color: '#D6EDFF'}}>·</span> <a href="https://redwood.berkeley.edu/">Redwood Center for Theoretical <br></br> Neuroscience</a></h3>
+                    <h3>Researcher <span style={{color: '#D6EDFF'}}>·</span> <a href="https://redwood.berkeley.edu/" target="_blank">Redwood Center for Theoretical <br></br> Neuroscience</a></h3>
                     <p>
                     Optimizing process of solving hard combinatorial problems (k-SAT) through coupled-oscillator implementation of Ising models. Researching application in solving Multiple-Input-Multiple-Output (MIMO) problems.
                     </p>
@@ -123,7 +123,7 @@ const App = () => {
                     <img src="images/berkeleytime.png" alt="" class="experience-image"></img>
                   </div>
                   <div className="role-company">
-                    <h3>Backend Developer <span style={{color: '#D6EDFF'}}>·</span> <a href="https://berkeleytime.com/">Berkeleytime</a></h3>
+                    <h3>Backend Developer <span style={{color: '#D6EDFF'}}>·</span> <a href="https://berkeleytime.com/" target="_blank">Berkeleytime</a></h3>
                     <p>
                     Managing and implementing novel features for UC Berkeley's most popular online course discovery platform used by 30k+ users monthly. Designed scalable backend, building semantic search pipeline to increase accesibility.
                     </p>
@@ -147,7 +147,7 @@ const App = () => {
                     <img src="images/verizon.png" alt="" class="experience-image"></img>
                   </div>
                   <div className="role-company">
-                    <h3>Network Systems Engineering Intern <span style={{color: '#D6EDFF'}}>·</span> <a href="https://www.verizon.com/">Verizon</a></h3>
+                    <h3>Network Systems Engineering Intern <span style={{color: '#D6EDFF'}}>·</span> <a href="https://www.verizon.com/" target="_blank">Verizon</a></h3>
                     <p>
                     Developed tool to visualize nationwide network topology, monitor millions of customer KPIs + data-quality, and improve risk-mitigation. Achieved an estimated 20% reduction in MTTR (Mean Time to Repair).
                     </p>
@@ -173,7 +173,7 @@ const App = () => {
                     <img src="images/eesa.jpg" alt="" class="experience-image"></img>
                   </div>
                   <div className="role-company">
-                    <h3>Full-Stack Developer Intern <span style={{color: '#D6EDFF'}}>·</span> <a href="https://www.linkedin.com/company/eesa-ai/">Eesa</a></h3>
+                    <h3>Full-Stack Developer Intern <span style={{color: '#D6EDFF'}}>·</span> <a href="https://www.linkedin.com/company/eesa-ai/" target="_blank">Eesa</a></h3>
                     <p>
                     Devised and implemented majority of the Eesa Chatbot website frontend, integrated with backend, and built in-house online authentication pipeline to regulate and store customer information.
                     </p>
@@ -194,7 +194,7 @@ const App = () => {
                     <img src="images/carviz.jpg" alt="" class="experience-image"></img>
                   </div>
                   <div className="role-company">
-                    <h3>AI/ML Engineering Intern <span style={{color: '#D6EDFF'}}>·</span> <a href="https://carviz.com/">Carviz</a></h3>
+                    <h3>AI/ML Engineering Intern <span style={{color: '#D6EDFF'}}>·</span> <a href="https://carviz.com/" target="_blank">Carviz</a></h3>
                     <p>
                     Created and optimized 20+ machine learning models to detect/classify car parts and damage, constructed pipeline for integration into comprehensive vehicle inspection platform.
                     </p>
