@@ -1,0 +1,28 @@
+:root {
+  --bg: #000;       /* black background   */
+  --fg: #00af35;    /* green foreground   */
+  --font: "Courier New", Courier, monospace;
+}
+
+/* --- reset & layout --- */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;   /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  background: var(--bg);
+}
+
+/* --- heading --- */
+h1 {
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 3rem;       /* tweak size as you like */
+  margin: 0;
+  text-align: center;
+}
